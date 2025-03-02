@@ -1,0 +1,8 @@
+#Write a program that takes an integer, then a string, then a char from the user and prints them in the screen.
+a = int(input("Enter the Number : "))
+b = input("Enter your Name : ")
+c = input("Enter the character : ")
+
+print(a)
+print(b)
+print(c)
