@@ -1,0 +1,10 @@
+Write a program to check whether a triangle can be formed with the given values for the angles.
+
+a = int(45)
+b = int(45)
+c = int(45)
+
+if a+b+c==180:
+    print ("Triangle can be formed")
+else:
+    print("Triangle cannot be formed")
