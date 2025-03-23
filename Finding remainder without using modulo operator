@@ -1,0 +1,8 @@
+Take two inputs from the user and find the remainder of a
+
+Solution:
+
+        a = int(input("Enter a number : "))
+        b = int(input("Enter a number : "))
+        rem = a - ((a//b) * b) // this is just a syntax develop the code accordingly
+        
