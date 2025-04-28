@@ -1,0 +1,22 @@
+Problem -> https://www.geeksforgeeks.org/problems/search-in-a-matrix--021840/0?page=1&sortBy=difficulty
+
+Solution: 
+class Solution:
+    
+    #Function to search a given integer in a matrix.
+    def searchMatrix(self,matrix, x): 
+    	# code here 
+    	for row in matrix:
+    	    for element in row:
+    	        if element == x:
+    	            return True
+    	return False
+
+============================================================================================================================
+
+Solution: (Optimal)
+class Solution:
+    def searchMatrix(self, matrix, x):
+        return any(x in row for row in matrix)
+
+============================================================================================================================
