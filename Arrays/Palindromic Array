@@ -1,0 +1,18 @@
+Problem -> https://www.geeksforgeeks.org/problems/palindromic-array-1587115620/1?page=1&category=Arrays&sortBy=difficulty
+
+Solution :
+def isPalinArray(arr):
+    # Code here
+    for n in arr:
+        original_number = n
+        reversed_number = 0
+        
+        while (n>0):
+            last_digit = n%10
+            reversed_number = reversed_number * 10 + last_digit
+            n = n//10
+            
+        if reversed_number != original_number:
+            return False
+            
+    return True
