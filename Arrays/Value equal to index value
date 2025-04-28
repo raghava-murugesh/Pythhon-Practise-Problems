@@ -1,0 +1,12 @@
+Problem -> https://www.geeksforgeeks.org/problems/value-equal-to-index-value1330/1?page=1&category=Arrays&sortBy=difficulty
+
+Solution :
+class Solution:
+    # Function to find values in array equal to their indices
+    def valueEqualToIndex(self, arr):
+        element = []
+        for i in range (len(arr)):
+            if arr[i] == i+1:
+                element.append(arr[i])
+                
+        return element
