@@ -1,0 +1,10 @@
+Problem -> https://www.geeksforgeeks.org/problems/multiply-array-1658312632/1?page=1&category=Arrays&sortBy=difficulty
+
+Solution :
+class Solution:
+    def longest(self, arr, n):
+        #Code 
+        product = 1
+        for i in range (n):
+            product =  product * arr[i]
+        return product
