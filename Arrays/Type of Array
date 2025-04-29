@@ -1,0 +1,55 @@
+Problem -> https://www.geeksforgeeks.org/problems/type-of-array4605/1?page=1&category=Arrays&difficulty=Basic&sortBy=difficulty
+
+Solution : (Geeks for Geeks)
+class Solution:
+
+    def maxNtype(self, arr):
+        #code here.
+        n = len(arr)
+        max_value = 0
+        index = 0
+
+        # Find the maximum element and its index.
+        for i in range(n):
+            if arr[i] > max_value:
+                max_value = arr[i]
+                index = i
+
+        # Determine the type based on the given conditions.
+        if arr[0] == max_value and arr[n - 2] > arr[n - 1]:
+            type_value = 2
+        elif arr[n - 1] == max_value and arr[1] > arr[0]:
+            type_value = 1
+        elif arr[(n + index - 1) % n] > arr[(n + index + 1) % n]:
+            type_value = 4
+        else:
+            type_value = 3
+
+        return type_value
+
+===================================================================================================================================================
+
+Solution: (My Solution)
+
+class Solution:
+    def maxNtype(self, arr):
+        n = len(arr)
+        asc_breaks = 0
+        desc_breaks = 0
+
+        for i in range(n):
+            if arr[i] > arr[(i+1)%n]:
+                asc_breaks += 1
+            elif arr[i] < arr[(i+1)%n]:
+                desc_breaks += 1
+
+        if asc_breaks == 0:
+            return 1  # ascending
+        elif desc_breaks == 0:
+            return 2  # descending
+        elif asc_breaks == 1:
+            return 4  # ascending rotated
+        elif desc_breaks == 1:
+            return 3  # descending rotated
+        else:
+            return -1  # invalid case (optional, for clarity)
