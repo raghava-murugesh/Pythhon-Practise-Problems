@@ -1,0 +1,14 @@
+Problem -> https://www.geeksforgeeks.org/problems/palindrome0746/1
+
+Solution:
+class Solution:
+    def isPalindrome(self, n):
+		# Code here
+		original = n
+		reversed = 0
+		while n>0:
+		    digit = n%10
+		    reversed = reversed*10 + digit
+		    n = n // 10
+		    
+		return reversed == original
