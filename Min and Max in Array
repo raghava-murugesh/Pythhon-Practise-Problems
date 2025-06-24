@@ -1,0 +1,44 @@
+Problem -> https://www.geeksforgeeks.org/problems/find-minimum-and-maximum-element-in-an-array4428/1
+
+Solution: My Sol
+
+class Solution:
+
+    def get_min_max(self, arr):
+        return min(arr), max(arr)
+
+===============================================================================================
+
+Geeks for Geeks Sol :
+class Solution:
+
+    def get_min_max(self, arr):
+        mn = float('inf')
+        mx = float('-inf')
+
+        # Iterating over the array
+        for num in arr:
+            # Updating the minimum value
+            mn = min(num, mn)
+
+            # Updating the maximum value
+            mx = max(num, mx)
+
+        # Returning the minimum and maximum values as a tuple
+        return (mn, mx)
+
+===============================================================================================
+
+class Solution:
+    def get_min_max(self, arr, n):
+        min_val = max_val = arr[0]
+
+        for num in arr:
+            if num < min_val:
+                min_val = num
+            if num > max_val:
+                max_val = num
+
+        return Pair(min_val, max_val)
+
+===============================================================================================
