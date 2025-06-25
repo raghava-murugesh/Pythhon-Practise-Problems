@@ -1,0 +1,10 @@
+Problem -> https://www.naukri.com/code360/problems/rotate-array_1230543?leftPanelTabValue=SUBMISSION
+
+Solution :
+
+def rotateArray(arr: list, k: int) -> list:
+    # Write your code here.
+    n = len(arr)
+    k = k % n
+    
+    return arr[k:] + arr[:k]
