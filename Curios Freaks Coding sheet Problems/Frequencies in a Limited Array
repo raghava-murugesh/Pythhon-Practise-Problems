@@ -40,11 +40,12 @@ Solution with no counter :
 
 class Solution:
     # Function to count the frequency of all elements from 1 to N in the array.
-    def frequencyCount(self, arr, N):
-        result = [0] * N
+    def frequencyCount(self, arr):
+        n = len(arr)
+        result = [0] * n
         
         for num in arr:
-            if 1 <= num <= N:
+            if 1 <= num <= n:
                 result [num -1] += 1
                 
         return result
