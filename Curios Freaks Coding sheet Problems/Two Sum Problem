@@ -1,0 +1,22 @@
+Problem -> https://www.geeksforgeeks.org/problems/key-pair5616/1?itm_source=geeksforgeeks&itm_medium=article&itm_campaign=bottom_sticky_on_article
+
+Solution:
+
+class Solution:
+	def twoSum(self, arr, target):
+		# code here
+		arr.sort()
+		left = 0
+		right = len(arr)-1
+		
+		while left<right:
+		    s = arr[left]+arr[right]
+		    
+		    if s == target:
+		        return True
+		    elif s<target:
+		        left += 1
+		    else:
+		        right -= 1
+		        
+		return False
