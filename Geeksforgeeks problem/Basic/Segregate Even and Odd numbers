@@ -1,0 +1,28 @@
+Problem -> https://www.geeksforgeeks.org/problems/segregate-even-and-odd-numbers4629/1?page=1&difficulty=Basic&sortBy=difficulty
+
+Solution: 
+class Solution:
+
+	def segregateEvenOdd(self,arr):
+		# code here
+		even = []
+		odd = []
+		for i in range (len(arr)):
+		    if arr[i]%2 == 0:
+		        even.append(arr[i])
+		        
+		    else:
+		        odd.append(arr[i])
+		        
+		        
+	    even.sort()
+	    odd.sort()
+	    arr[:] = even + odd
+
+=========================================================================================
+
+more optimized version
+
+class Solution:
+    def segregateEvenOdd(self, arr):
+        arr.sort(key=lambda x: (x % 2, x))
